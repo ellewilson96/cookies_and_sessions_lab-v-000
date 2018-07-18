@@ -4,12 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_cart
 
-  def index
+  def cart
     session[:cart] ||= []
   end
 
   class Item
-    def create
+    def add_to_cart
       @item = Item.find(params[:id])
 
       current_cart = @item.id
