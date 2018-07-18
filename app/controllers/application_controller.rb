@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
       current_cart = @item.id
     end
   end
+  render :index
 end
 
 end
