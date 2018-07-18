@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
     session[:cart] ||= []
   end
 
-  get '/' do
   class Item
     def add_to_cart
       @item = Item.find(params[:id])
@@ -17,6 +16,6 @@ class ApplicationController < ActionController::Base
     end
   end
   render :index
-end
+
 
 end
