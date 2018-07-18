@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
       @item = Item.find(params[:id])
 
       current_cart = @item.id
+    end
   end
-end
 end
 
 end
